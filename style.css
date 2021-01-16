@@ -4,59 +4,54 @@
 }
 main{
     width: 1200px;
+    max-width: 90%;
     margin: 0 auto;
 }
 .player img{ 
     height: 50px;
     margin-right: 20px;
 }
-.Top-player{
+.Top-player, .blogs{
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
     grid-gap: 30px;
     margin-top: 20px;
     place-items: center;
-   
+}
+.Top-player{
+    grid-template-columns: repeat(3 , 1fr);
+}
+.blogs{
+    grid-template-columns: repeat(2, 1fr);
 }
 .player{
     
     display: flex;
     align-items: center;  
 }
+
+.blog{
+    display: flex;
+    align-items: center;
+}
+.thumbnail img{
+    width: 200px;
+    margin-right: 20px;
+}
+
 @media (max-width:992px){
     .Top-player{
     grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width:668px){
     .Top-player{
     grid-template-columns: repeat(1, 1fr);
     }
-}
-
-.blog{
-    display: flex;
-    align-items: center;
-}
-.blogs{      /* this blog style can be simply added to top-player style as .Top-player, blog{ ...... */
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    grid-gap: 30px;
-    margin-top: 20px;
-    place-items: center;
-    
-}
-.thumbnail img{
-    width: 200px;
-    margin-right: 20px;
-}
-@media(max-width:992px){
-    .blogs{
-        grid-template-columns: repeat(1, 1fr);
-        }
-}
-@media(max-width:668){
     .blog{
         display: block;
     }
 }
+
