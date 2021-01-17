@@ -91,6 +91,11 @@ main{
 .course-info{
     display: flex;
 }
+.duration{
+    padding-left: 40px;
+    background-color: hotpink;
+    border-radius: 6px;
+}
 @media (max-width:992px){
     .Top-player, .courses{
     grid-template-columns: repeat(2, 1fr);
